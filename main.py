@@ -33,6 +33,7 @@ actual_url = driver.current_url
 assert actual_url == "https://darkagesworld.ru/vr?check_logged_in=1"
 print('I am in')
 
+
 # step3 Cut the tree
 # a Captcha chat GPT solution
 
@@ -42,18 +43,15 @@ def captcha():
     print('Refresh in function')
     time.sleep(6)
 
-
-    def assertion():
+    def captcha_screenshot():
         captcha_element = driver.find_element(By.XPATH, (
             "//img[@title='CAPTCHA на основе изображений']"))
-        assert captcha_element.is_displayed(), "Captcha is not displayed"
-        print("assertion has passed")
+        captcha_element.screenshot("captcha.png")
 
-    assertion()
-
-    captcha_element = driver.find_element(By.XPATH, (
-        "//img[@title='CAPTCHA на основе изображений']"))
-    captcha_element.screenshot("captcha.png")
+    try:
+        captcha_screenshot()
+    except:
+        captcha()
 
     captcha_image = cv2.imread("captcha.png")
 
@@ -77,10 +75,8 @@ def captcha():
         time.sleep(190)  # 180 seconds = 3 minutes
         print("3 minutes later")
         captcha()
-    #cut_tree_locator.click()
+    # cut_tree_locator.click()
     print('To cut is clicked')
-
-
 
     if cut_tree_locator.is_displayed():
         print("Captcha isn't correct. Repeating...")
@@ -92,5 +88,3 @@ def captcha():
 
 
 captcha()
-
-print("Verify changes")
