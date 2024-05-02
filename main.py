@@ -93,4 +93,4 @@ def captcha():
 
 captcha()
 
-print("Dev changes")
+print("Verify changes")
