@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18fda55f-5a7b-4e20-8127-4042f279ff25" name="Changes" comment="add hello_world" />
+    <list default="true" id="18fda55f-5a7b-4e20-8127-4042f279ff25" name="Changes" comment="delete assertion, added try except. infinite loop for cutting">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +52,7 @@
       <recent name="C:\Users\mroma\PycharmProjects\pythonProject\Cut the tree" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
     <configuration name="All tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SV" />
       <option name="INTERPRETER_OPTIONS" value="" />
