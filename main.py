@@ -38,6 +38,15 @@ print('I am in')
 # a Captcha chat GPT solution
 
 
+# while True:
+#     driver.refresh()
+#     print('Refresh in function')
+#     try:
+#         captcha_element = driver.find_element(By.XPATH, ("//img[@title='CAPTCHA на основе изображений']"))
+#         captcha_element.screenshot("captcha.png")
+#     except:
+
+
 def captcha():
     driver.refresh()
     print('Refresh in function')
@@ -55,8 +64,8 @@ def captcha():
 
     captcha_image = cv2.imread("captcha.png")
 
-    whitelist = ' 0123456789'
-    config = f'--psm 6 tessedit_char_whitelist={whitelist}'
+    # tesseract v5.3.3.20231005
+    config = r'--oem 3 --psm 6 -c tessedit_char_whitelist=0123456789'
     captcha_text = pytesseract.image_to_string(captcha_image, config=config)
     print(captcha_text)
 
